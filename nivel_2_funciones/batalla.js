@@ -1,5 +1,5 @@
-let energiaDeadpool = 100;
-let energiaSpiderman = 90;
+let energiaDeadpool = 90;
+let energiaSpiderman = 100;
 
 function ataque(atacante, defensor, nivelAtaque) {
     console.log(atacante + " ataca a " + defensor + " con poder " + nivelAtaque);
@@ -26,7 +26,8 @@ function escudoMagico() {
     return 30;
 }
 
-console.log("¡Comienza la batalla!");
+console.log("¡Comienza la batalla entre Deadpool y Spiderman! ");
+
 let dano = ataque("Deadpool", "Spiderman", 20);
 let bloqueo = defender("Spiderman", 10);
 energiaSpiderman -= (dano - bloqueo);
@@ -42,6 +43,8 @@ bloqueo = defender("Deadpool", 5);
 energiaDeadpool -= (dano - bloqueo);
 console.log("Energía de Deadpool: " + energiaDeadpool);
 
-recargarEnergia("Deadpool", 10);
-energiaDeadpool += 10;
+let energiaRecuperada = recargarEnergia("Deadpool", 10);
+energiaDeadpool += energiaRecuperada;
 console.log("Energía de Deadpool final: " + energiaDeadpool);
+
+console.log("La batalla termina por ahora...");
