@@ -1,5 +1,3 @@
-// OBJETO JUGADOR
-
 let jugador = {
     nombre: "Gordon Freeman",
     vida: 100,
